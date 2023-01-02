@@ -59,16 +59,12 @@ img {
 .container {
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 428px) {
   .container {
     width: 428px;
-    max-width: 767px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-
-    /* background-color: var(--color-secondary); */
   }
 }
 
@@ -80,7 +76,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .container {
-    min-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -359,14 +355,32 @@ img {
 
     background-color: var(--primary-brand);
   }
+  .elements-place {
+    display: block;
+  }
+  .second-list,
+  .element-of-dicoration,
+  .svg-none {
+    display: none;
+  }
+  .place-of-space {
+    margin-bottom: 96px;
+  }
+  .place-of-space:not(:last-child) {
+    margin-bottom: 72px;
+  }
+  .box-social-link {
+    display: block;
+  }
 }
 /* -----кінець унікальним стилям для мобільних девайсів------- */
+
+/* =====Стилі від мобіли до ПК====== */
 
 /* ----- секція герой -------- */
 @media screen and (min-width: 320px) {
   .hero-style {
     height: 432px;
-    max-width: 767px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 112px;
@@ -378,9 +392,8 @@ img {
       url(../images/people-bg.jpg);
     background-size: 428px 432px;
     background-repeat: no-repeat;
-    background-size: cover;
   }
-  @media (min-device-pixel-ratio: 2),
+  @media screen and (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -391,7 +404,7 @@ img {
         ),
         url(../images/people-bg@2x.jpg);
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: 428px 432px;
     }
   }
 
@@ -416,7 +429,7 @@ img {
     display: block;
     min-width: 170px;
     margin-top: 48px;
-   
+
     padding-top: 16px;
     padding-right: 10px;
     padding-bottom: 16px;
@@ -429,7 +442,7 @@ img {
     margin-right: auto;
     align-items: center;
     cursor: pointer;
-  
+
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -448,25 +461,51 @@ img {
     background: #404bbf;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
-}
 
-/* ----- /секція герой -------- */
-/* ------оформлення секції герой ----------*/
-/* .hero-style {
-  max-width: 1440px;
- 
-  padding-top: 192px;
-  padding-bottom: 192px;
+  /* ----- /секція герой -------- */
+
+  /* ------секція друга основні переваги----- */
+  .subhead {
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+  }
+
+  .main-content {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main-color-text);
+  }
+  .box-space {
+    padding-top: 96px;
+  }
+  .image-distance {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .back-pictures-phone {
+    width: 260px;
+    height: 428px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .back-pictures-phone:not(:last-child) {
+    margin-bottom: 72px;
+  }
   
-    url(../images/people-office.jpg);
-  background-size: cover;
-  text-align: center;
+  /* ------/секція друга основні переваги----- */
+
+ 
+
 }
 
+/* =====Стилі від мобіли до ПК====== */
 
-
-
-  /* ------/оформлення секції герой ----------*/
 /* ========== /МОБІЛЬНА ВЕРСІЯ ======= */
 
 /* ================Планшетна версія=========== */
@@ -491,18 +530,16 @@ img {
   }
 
   .hero-style {
-    width: 768px;
-    height: 436px;
-
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/dark-bg-tablet.jpg);
     background-size: 768px 436px;
+    background-size: cover;
   }
 
-  @media (min-device-pixel-ratio: 2),
+  @media screen and (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -520,92 +557,186 @@ img {
     width: 496px;
     line-height: 1.07;
   }
-}
+  .elements-place {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .subhead {
+    text-align: left;
+  }
+  .main-content {
+    width: 356px;
+  }
 
+  .data-team {
+    display: flex;
+    gap: 24px;
+  }
+
+
+}
 /* ================/Планшетна версія=========== */
+
+/* -----тільки для планшета---- */
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .data-team {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+   
+  }
+
+  .back-pictures-phone {
+    margin: 0;
+    margin-bottom: 64px;
+  }
+  
+}
+/* -----/тільки для планшета---- */
+/* ---- Eлементи мобільної і планшетної версії--- */
+
+@media screen and (max-width: 1199px) {
+  .second-list,
+  .element-of-dicoration,
+  .svg-none,
+  .space,
+  .work-list,
+  .work-list-item,
+  .foto-is-dispare {
+    display: none;
+  }
+
+  .subhead {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+  }
+  .main-content {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main-color-text);
+  }
+}
+/* ----/Приховані елементи мобільної і плпншетної версії--- */
+
+/* =====Десктопна версія======== */
+/* ------шапка і секція герой----- */
 
 @media screen and (min-width: 1200px) {
   .text-top {
     display: flex;
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.02em;
   }
+
   .list-distance {
     margin-left: 40px;
   }
-}
 
-/*  -------секція друга - основні переваги-------------*/
-.second-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 264px;
-  height: 112px;
-  margin-bottom: 8px;
+  .hero-style {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office1x.jpg);
+    background-size: cover;
+  }
 
-  padding: 24px 100px;
-  background: #f4f4fd;
-  border-radius: 4px;
-}
-.elements-place {
-  display: flex;
-  justify-content: space-between;
-}
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-style {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office@2x.jpg);
+    }
+  }
 
-.place-of-space:not(:last-child) {
-  margin-right: 24px;
-  flex-basis: calc((100% - 72px) / 4);
-  min-width: 264px;
-}
-.element-of-dicoration {
-  width: 64px;
-  height: 64px;
-}
+  /*---- секція друга основні переваги---- */
+  .main-content {
+    width: 264px;
+    font-weight: 400;
+  }
+  .second-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
 
-.subhead {
-  margin-bottom: 8px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-}
-.main-content {
-  letter-spacing: 0.02em;
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--main-color-text);
-}
+    padding: 24px 100px;
+    background: #f4f4fd;
+    border-radius: 4px;
+  }
 
+  .place-of-space:not(:last-child) {
+    margin-right: 24px;
+    flex-basis: calc((100% - 72px) / 4);
+    min-width: 264px;
+  }
+  .element-of-dicoration {
+    width: 64px;
+    height: 64px;
+  }
+
+  .subhead {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  .back-ceil {
+    padding-top: 120px;
+  }
+
+
+}
 /*  --------/секція друга - основні переваги-------------*/
 
+/* =====/Десктопна версія======== */
+
 /* ----------cекція третя - що ми робимо-------------- */
-.box-space {
-  padding-bottom: 120px;
-  padding-top: 120px;
-}
-.subtitle {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  margin-bottom: 72px;
-}
-.work-list {
-  display: flex;
-  gap: 24px;
-}
-.work-list-item {
-  flex-basis: calc((100% - 48px) / 3);
-}
+
+
+  .space {
+    margin-top: 120px;
+    padding-bottom: 120px;
+  }
+  .subtitle {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+  }
+
+  .work-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .work-list-item {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+
 /* --------/cекція третя - що ми робимо-------------- */
 
 /*--------секція четверта - наша команда-----------*/
-.space {
-  padding-bottom: 120px;
-}
+
 .image-descriptions {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -623,10 +754,8 @@ img {
   background-color: var(--color-fon);
 }
 
-.data-team {
-  display: flex;
-  gap: 24px;
-}
+
+
 .back-pictures-phone {
   flex-basis: calc((100% - 72px) / 4);
   background-color: var(--color-secondary);
@@ -642,11 +771,13 @@ img {
   letter-spacing: 0.02em;
   color: var(--main-color-text);
 }
+
 .box-social-link {
   display: flex;
   justify-content: center;
   gap: 24px;
 }
+
 
 .social-link-item {
   display: flex;
