@@ -35,20 +35,29 @@
               >
             </li>
             <li class="menu-item">
-              <a class="menu-list curent-page decor text-style" href="#">Portfolio</a>
+              <a class="menu-list decor curent-page text-style" href=""
+                >Portfolio</a
+              >
             </li>
             <li class="menu-item">
-              <a class="menu-list decor text-style" href="#">Contacts</a>
+              <a class="menu-list decor text-style" href="">Contacts</a>
             </li>
           </ul>
         </nav>
+
+        <button class="burger-menu" type="button" click-modal-open>
+          <svg class="icon-burger-menu">
+            <use href="./images/sprite.svg#icon-charm_menu-hamburger"></use>
+          </svg>
+        </button>
+
         <ul class="text-top list">
           <li>
             <a href="mailto:info@devstudio.com" class="decor text-top-efects"
               >info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="list-distance">
             <a
               href="tel:+11(000)111-11-11"
               class="decor text-top-efects top-link-margin"
@@ -56,6 +65,77 @@
             >
           </li>
         </ul>
+      </div>
+      <div class="mobile-menu" full-modal>
+        <div class="container mobile-container">
+          <button class="close-mobile-menu" type="button" click-modal-close>
+            <svg class="style-mobile-button-menu" width="8px" height="8px">
+              <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <ul class="mobile-page-list list">
+            <li class="mobile-link-space">
+              <a class="mobile-page-items decor" href="#">Studio</a>
+            </li>
+            <li class="mobile-link-space">
+              <a class="mobile-page-items decor" href="#">Portfolio</a>
+            </li>
+            <li class="mobile-link-space">
+              <a class="mobile-page-items decor" href="#">Contacts</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-list-contacts list">
+            <li class="mob-menu-items">
+              <a
+                class="mob-tel-style"
+                href="tel:+11(000)111-11-11"
+                class="decor"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mob-menu-items">
+              <a
+                class="mail-mobile-menu"
+                href="mailto:info@devstudio.com"
+                class="decor"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mobile-sociale-link list">
+            <li class="mob-soc-link">
+              <a href="#" class="mobile-link-item">
+                <svg class="link-marker">
+                  <use href="./images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-link">
+              <a href="#" class="mobile-link-item">
+                <svg class="link-marker">
+                  <use href="./images/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-link">
+              <a href="#" class="mobile-link-item">
+                <svg class="link-marker">
+                  <use href="./images/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-link">
+              <a href="#" class="mobile-link-item">
+                <svg class="link-marker">
+                  <use href="./images/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -86,7 +166,8 @@
             <li class="pakcage-list-link">
               <a href="#" class="decor list-link">
                 <div class="common-parent">
-                  <img class="main-portfolio-photo"
+                  <img
+                    class="main-portfolio-photo"
                     src="./images/img1p.jpg"
                     alt="bank app"
                     width="360"
@@ -330,16 +411,19 @@
               placeholder="E-mail"
             />
           </label>
-          
-          <button class="button-send-mail buttons-style join-button" type="submit">
-              Subscribe
-              <svg class="svg-airplane">
-                <use href="./images/sprite-original.svg#icon-frame"></use>
-              </svg>
+
+          <button
+            class="button-send-mail buttons-style join-button"
+            type="submit"
+          >
+            Subscribe
+            <svg class="svg-airplane">
+              <use href="./images/sprite-original.svg#icon-frame"></use>
+            </svg>
           </button>
-          
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
