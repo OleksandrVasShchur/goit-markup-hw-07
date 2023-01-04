@@ -393,7 +393,7 @@ img {
     background-size: 428px 432px;
     background-repeat: no-repeat;
   }
-  
+
   @media screen and (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -486,9 +486,7 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
-  .back-pictures-phone:not(:last-child) {
-    margin-bottom: 72px;
-  }
+  
   .main-content {
     font-weight: 500;
     letter-spacing: 0.02em;
@@ -497,7 +495,13 @@ img {
     color: var(--main-color-text);
   }
 }
-  /* ------/секція друга основні переваги----- */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .back-pictures-phone:not(:last-child) {
+    margin-bottom: 72px;
+  } 
+  
+}
+/* ------/секція друга основні переваги----- */
 
 /* =====Стилі від мобіли до ПК====== */
 
@@ -579,11 +583,12 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    column-gap: 24px;
+    row-gap: 64px;
   }
 
   .back-pictures-phone {
     margin: 0;
-    margin-bottom: 64px;
   }
   .box-space {
     padding-bottom: 104px;
@@ -698,6 +703,7 @@ img {
   .box-space {
     padding-bottom: 120px;
   }
+  
 }
 /*  --------/секція друга - основні переваги-------------*/
 
@@ -705,10 +711,10 @@ img {
 
 /* ----------cекція третя - що ми робимо-------------- */
 
-.space {
+/* .space {
   margin-top: 120px;
   padding-bottom: 120px;
-}
+} */
 .subtitle {
   font-weight: 700;
   font-size: 36px;
@@ -1271,22 +1277,33 @@ img {
 /* ==================Portfolio======================= */
 
 /* -----------оформлення кнопок----------- */
+@media screen and (min-width: 320px) {
+  .portfolio-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-bottom: 48px;
+    column-gap: 24px;
+    row-gap: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-menu {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-menu {
+    margin-bottom: 72px;
+  }
+}
+
 .main-box {
   padding-top: 96px;
   padding-bottom: 120px;
-}
-.main-box {
-  padding-top: 96px;
-  padding-bottom: 120px;
-}
-.portfolio-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 72px;
-}
-.menu-items:not(:last-child) {
-  margin-right: 24px;
 }
 
 .filter-button {
@@ -1318,11 +1335,48 @@ img {
 /* -----------/оформлення кнопок----------- */
 
 /* ----------оформлення тексту до карток-------------*/
-.main-list {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 48px;
-  column-gap: 24px;
+
+@media screen and (min-width: 320px) {
+  .main-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+  }
+  
+  .pakcage-list-link {
+    width: 396px;
+  }
+}
+@media screen and (min-width: 768px) {
+  
+
+  .pakcage-list-link {
+    width: 356px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pakcage-list-link {
+    width: 360px;
+  }
+
+  .box-space {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .widout-padding {
+    padding-bottom: 0;
+  }
+  .back-pictures-phone {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .main-list {
+  row-gap: 72px;
+  }
 }
 
 .list-link {
@@ -1341,6 +1395,7 @@ img {
 }
 .main-portfolio-photo {
   display: block;
+  width: 100%;
 }
 
 .overlay {
@@ -1370,9 +1425,7 @@ img {
 }
 
 .card-text {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 16px;
+  padding: 32px 16px;
   border-left: 0.5px solid #f4f4fd;
   border-bottom: 0.5px solid #f4f4fd;
   border-right: 0.5px solid #f4f4fd;
