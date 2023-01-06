@@ -57,6 +57,7 @@ img {
 
 /* ----------адаптивний контейнер--------- */
 .container {
+  width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -74,9 +75,9 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .container {
-    width: 1200px;
+    width: 1158px;
   }
 }
 
@@ -156,7 +157,7 @@ img {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: inherit;
@@ -286,7 +287,7 @@ img {
   .mobile-page-items {
     display: block;
 
-    font-weight: 700;
+    font-weight: 500;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
@@ -380,17 +381,12 @@ img {
 /* ----- секція герой -------- */
 @media screen and (min-width: 320px) {
   .hero-style {
-    height: 432px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 112px;
-
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/people-bg.jpg);
-    background-size: 428px 432px;
+   
     background-repeat: no-repeat;
   }
 
@@ -399,6 +395,7 @@ img {
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero-style {
+      text-align: center;
       background-image: linear-gradient(
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
@@ -427,10 +424,7 @@ img {
   }
 
   .buttons-style {
-    display: block;
     min-width: 170px;
-    margin-top: 48px;
-
     padding-top: 16px;
     padding-right: 10px;
     padding-bottom: 16px;
@@ -439,8 +433,6 @@ img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 1px transparent;
-    margin-left: auto;
-    margin-right: auto;
     align-items: center;
     cursor: pointer;
 
@@ -486,7 +478,7 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .main-content {
     font-weight: 500;
     letter-spacing: 0.02em;
@@ -498,8 +490,23 @@ img {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .back-pictures-phone:not(:last-child) {
     margin-bottom: 72px;
-  } 
-  
+  }
+  .hero-style {
+    padding-top: 112px;
+    padding-bottom: 112px;
+    background-size: cover;
+  }
+  .hero-title {
+    margin-bottom: 72px;
+  }
+  .pacage-footer-link {
+    margin-bottom: 72px;
+  }
+  .button-send-mail {
+    margin-left: auto;
+    margin-right: auto;
+  }
+ 
 }
 /* ------/секція друга основні переваги----- */
 
@@ -565,9 +572,6 @@ img {
   .subhead {
     text-align: left;
   }
-  .main-content {
-    width: 356px;
-  }
 
   .data-team {
     display: flex;
@@ -578,13 +582,16 @@ img {
 
 /* -----тільки для планшета---- */
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .data-team {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 24px;
     row-gap: 64px;
+  }
+  .main-content {
+    width: 356px;
   }
 
   .back-pictures-phone {
@@ -593,11 +600,18 @@ img {
   .box-space {
     padding-bottom: 104px;
   }
+  .hero-style {
+    padding-top: 112px;
+    padding-bottom: 108px;
+  }
+  .hero-title {
+    margin-bottom: 40px;
+  }
 }
 /* -----/тільки для планшета---- */
 /* ---- Eлементи мобільної і планшетної версії--- */
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1157px) {
   .second-list,
   .element-of-dicoration,
   .svg-none,
@@ -628,7 +642,7 @@ img {
 /* =====Десктопна версія======== */
 /* ------шапка і секція герой----- */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .text-top {
     display: flex;
     font-size: 16px;
@@ -639,6 +653,13 @@ img {
   .list-distance {
     margin-left: 40px;
   }
+  .hero-style {
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+  .hero-title {
+    margin-bottom: 48px;
+  }
 
   .hero-style {
     background-image: linear-gradient(
@@ -647,6 +668,7 @@ img {
       ),
       url(../images/people-office1x.jpg);
     background-size: cover;
+    max-width: 1440px;
   }
 
   @media screen and (min-device-pixel-ratio: 2),
@@ -664,24 +686,20 @@ img {
 
   /*---- секція друга основні переваги---- */
   .main-content {
-    width: 264px;
+    /* width: 264px; */
     font-weight: 400;
   }
   .second-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 264px;
     height: 112px;
     margin-bottom: 8px;
-
-    padding: 24px 100px;
     background: #f4f4fd;
     border-radius: 4px;
   }
 
-  .place-of-space:not(:last-child) {
-    margin-right: 24px;
+  .place-of-space {
     flex-basis: calc((100% - 72px) / 4);
     min-width: 264px;
   }
@@ -703,7 +721,6 @@ img {
   .box-space {
     padding-bottom: 120px;
   }
-  
 }
 /*  --------/секція друга - основні переваги-------------*/
 
@@ -843,7 +860,7 @@ img {
     align-items: center;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .icon-book {
     flex-wrap: nowrap;
   }
@@ -913,7 +930,6 @@ img {
     display: flex;
     gap: 16px;
     justify-content: center;
-    margin-bottom: 72px;
   }
 }
 
@@ -935,7 +951,7 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .color-back-space {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -945,14 +961,15 @@ img {
     margin-bottom: 0;
   }
   .main-div {
-    flex-wrap: nowrap;
+    width: 100%;
     justify-content: center;
+    flex-wrap: nowrap;
     padding-left: 15px;
   }
 
   .pacage-footer-link {
-    margin-left: 120px;
-    margin-right: 80px;
+    margin-left: 100px;
+    margin-right: 60px;
   }
 }
 
@@ -1248,7 +1265,7 @@ img {
   font-size: 12px;
   line-height: 1.33px;
   letter-spacing: 0.04em;
-  color: #757575;
+  color: #757575; 
 }
 .button-send {
   margin-right: auto;
@@ -1295,10 +1312,11 @@ img {
     margin-bottom: 64px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .portfolio-menu {
     margin-bottom: 72px;
   }
+  
 }
 
 .main-box {
@@ -1343,22 +1361,24 @@ img {
     row-gap: 48px;
     column-gap: 24px;
   }
-  
+
   .pakcage-list-link {
     width: 396px;
   }
+  .image-portfolio {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 768px) {
-  
-
   .pakcage-list-link {
     width: 356px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .pakcage-list-link {
-    width: 360px;
+    max-width: 360px;
+    flex-basis: calc((100%-72px)/3);
   }
 
   .box-space {
@@ -1371,11 +1391,12 @@ img {
   .back-pictures-phone {
     margin-bottom: 0;
   }
+  
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .main-list {
-  row-gap: 72px;
+    row-gap: 72px;
   }
 }
 
