@@ -45,7 +45,7 @@
           </ul>
         </nav>
 
-        <button class="burger-menu" type="button" click-modal-open>
+        <button class="burger-menu" type="button" data-modal-open>
           <svg class="icon-burger-menu">
             <use href="./images/sprite.svg#icon-charm_menu-hamburger"></use>
           </svg>
@@ -66,9 +66,9 @@
           </li>
         </ul>
       </div>
-      <div class="mobile-menu" full-modal>
+      <div class="mobile-menu" data-modal>
         <div class="container mobile-container">
-          <button class="close-mobile-menu" type="button" click-modal-close>
+          <button class="close-mobile-menu" type="button" data-modal-close>
             <svg class="style-mobile-button-menu" width="8px" height="8px">
               <use href="./images/sprite.svg#icon-close"></use>
             </svg>
@@ -79,7 +79,9 @@
               <a class="mobile-page-items decor" href="#">Studio</a>
             </li>
             <li class="mobile-link-space">
-              <a class="mobile-page-items decor" href="#">Portfolio</a>
+              <a class="mobile-page-items curent-mobile-page decor" href="#"
+                >Portfolio</a
+              >
             </li>
             <li class="mobile-link-space">
               <a class="mobile-page-items decor" href="#">Contacts</a>
@@ -89,17 +91,17 @@
           <ul class="mobile-list-contacts list">
             <li class="mob-menu-items">
               <a
-                class="mob-tel-style"
+                class="mob-tel-style decor"
                 href="tel:+11(000)111-11-11"
-                class="decor"
+                
                 >+11 (000) 111-11-11</a
               >
             </li>
             <li class="mob-menu-items">
               <a
-                class="mail-mobile-menu"
+                class="mail-mobile-menu decor"
                 href="mailto:info@devstudio.com"
-                class="decor"
+               
                 >info@devstudio.com</a
               >
             </li>
@@ -137,6 +139,73 @@
           </ul>
         </div>
       </div>
+      <div class="mobile-menu" data-modal>
+        <button class="close-mobile-menu" type="button" data-modal-close>
+          <svg class="style-mobile-button-menu" width="8px" height="8px">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-page-list list">
+          <li class="mobile-link-space">
+            <a class="mobile-page-items decor" href="">Studio</a>
+          </li>
+          <li class="mobile-link-space">
+            <a class="mobile-page-items curent-mobile-page decor" href=""
+              >Portfolio</a
+            >
+          </li>
+          <li class="mobile-link-space">
+            <a class="mobile-page-items decor" href="#">Contacts</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-list-contacts list">
+          <li class="mob-menu-items">
+            <a class="mob-tel-style decor" href="tel:+11(000)111-11-11"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li class="mob-menu-items">
+            <a
+              class="mail-mobile-menu decor"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-sociale-link list">
+          <li class="mob-soc-link">
+            <a href="#" class="mobile-link-item">
+              <svg class="mob-link-marker">
+                <use href="./images/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-soc-link">
+            <a href="#" class="mobile-link-item">
+              <svg class="mob-link-marker">
+                <use href="./images/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-soc-link">
+            <a href="#" class="mobile-link-item">
+              <svg class="mob-link-marker">
+                <use href="./images/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-soc-link">
+            <a href="#" class="mobile-link-item">
+              <svg class="mob-link-marker">
+                <use href="./images/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
     <main>
       <!-- секція посилань -->
@@ -166,9 +235,12 @@
             <li class="pakcage-list-link">
               <a href="#" class="decor list-link">
                 <div class="common-parent">
-                  <img class="image-portfolio"
-                    class="main-portfolio-photo"
-                    srcset="./images/banking-(1x).jpg 1x, ./images/banking@2x.jpg 2x"
+                  <img
+                    class="image-portfolio main-portfolio-photo"
+                    srcset="
+                      ./images/banking-(1x).jpg 1x,
+                      ./images/banking@2x.jpg   2x
+                    "
                     src="./images/img1p.jpg"
                     alt="bank app"
                   />
@@ -187,8 +259,9 @@
             <li class="pakcage-list-link">
               <a href="#" class="decor list-link">
                 <div class="common-parent">
-                  <img class="image-portfolio"
-                  srcset="./images/cash-(1x).jpg 1x, ./images/cash@2x.jpg 2x"
+                  <img
+                    class="image-portfolio"
+                    srcset="./images/cash-(1x).jpg 1x, ./images/cash@2x.jpg 2x"
                     src="./images/img2p.jpg"
                     alt="blue box"
                   />
@@ -207,8 +280,12 @@
             <li class="pakcage-list-link">
               <a href="#" class="decor list-link">
                 <div class="common-parent">
-                  <img class="image-portfolio"
-                  srcset="./images/meditaion-(1x).jpg 1x, ./images/meditaion@2x.jpg 2x"
+                  <img
+                    class="image-portfolio"
+                    srcset="
+                      ./images/meditaion-(1x).jpg 1x,
+                      ./images/meditaion@2x.jpg   2x
+                    "
                     src="./images/img3p.jpg"
                     alt="makbook and celphone"
                   />
@@ -227,8 +304,9 @@
             <li class="pakcage-list-link">
               <a href="#" class="decor list-link">
                 <div class="common-parent">
-                  <img class="image-portfolio"
-                  srcset="./images/taxi-(1x).jpg 1x, ./images/taxi@2x.jpg 2x"
+                  <img
+                    class="image-portfolio"
+                    srcset="./images/taxi-(1x).jpg 1x, ./images/taxi@2x.jpg 2x"
                     src="./images/img4p.jpg"
                     alt="navigator in the car"
                   />
@@ -247,8 +325,12 @@
             <li class="pakcage-list-link">
               <a href="#" class="decor list-link">
                 <div class="common-parent">
-                  <img class="image-portfolio"
-                  srcset="./images/screen-(1x).jpg 1x, ./images/screen@2x.jpg 2x"
+                  <img
+                    class="image-portfolio"
+                    srcset="
+                      ./images/screen-(1x).jpg 1x,
+                      ./images/screen@2x.jpg   2x
+                    "
                     src="./images/img5p.jpg"
                     alt="display of celphone"
                   />
@@ -267,8 +349,12 @@
             <li class="pakcage-list-link">
               <a href="#" class="decor list-link">
                 <div class="common-parent">
-                  <img class="image-portfolio"
-                  srcset="./images/online-(1x).jpg 1x, ./images/online@2x.jpg 2x"
+                  <img
+                    class="image-portfolio"
+                    srcset="
+                      ./images/online-(1x).jpg 1x,
+                      ./images/online@2x.jpg   2x
+                    "
                     src="./images/img6p.jpg"
                     alt="girl and celphone"
                   />
@@ -287,8 +373,12 @@
             <li class="pakcage-list-link">
               <a href="#" class="decor list-link">
                 <div class="common-parent">
-                  <img class="image-portfolio"
-                  srcset="./images/instagram-(1x).jpg 1x, ./images/instagram@2x.jpg 2x"
+                  <img
+                    class="image-portfolio"
+                    srcset="
+                      ./images/instagram-(1x).jpg 1x,
+                      ./images/instagram@2x.jpg   2x
+                    "
                     src="./images/img7p.jpg"
                     alt="profile"
                   />
@@ -307,8 +397,12 @@
             <li class="pakcage-list-link">
               <a href="#" class="decor list-link">
                 <div class="common-parent">
-                  <img class="image-portfolio"
-                  srcset="./images/organic-(1x).jpg 1x, ./images/organic@2x.jpg 2x"
+                  <img
+                    class="image-portfolio"
+                    srcset="
+                      ./images/organic-(1x).jpg 1x,
+                      ./images/organic@2x.jpg   2x
+                    "
                     src="./images/img8p.jpg"
                     alt="bag in food"
                   />
@@ -327,8 +421,12 @@
             <li class="pakcage-list-link">
               <a href="#" class="decor list-link">
                 <div class="common-parent">
-                  <img class="image-portfolio"
-                  srcset="./images/fresh-(1x).jpg 1x, ./images/fresh@2x.jpg 2x"
+                  <img
+                    class="image-portfolio"
+                    srcset="
+                      ./images/fresh-(1x).jpg 1x,
+                      ./images/fresh@2x.jpg   2x
+                    "
                     src="./images/img9p.jpg"
                     alt="cup of coffee"
                   />

@@ -9,11 +9,6 @@ body {
 html {
   box-sizing: border-box;
 }
-/* *,
-*::before,
-*::after {
-  box-sizing: inherit;
-}  */
 
 .visually-hidden {
   position: absolute;
@@ -65,9 +60,8 @@ img {
 }
 @media screen and (min-width: 320px) {
   .container {
-    width: 320px
+    width: 320px;
   }
-  
 }
 @media screen and (min-width: 428px) {
   .container {
@@ -245,6 +239,9 @@ img {
     transition: opacity var(--trans-der-and-func),
       visibility var(--trans-der-and-func);
   }
+  .mobile-page-items.curent-mobile-page {
+    color: var(--primary-brand);
+  }
 
   .mobile-menu.is-open {
     opacity: 1;
@@ -292,7 +289,7 @@ img {
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
-    color: inherit;
+    color: var(--universal-color);
     transition: color var(--trans-der-and-func);
   }
 
@@ -435,7 +432,6 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 320px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;

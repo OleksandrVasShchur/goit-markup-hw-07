@@ -45,7 +45,7 @@
           </ul>
         </nav>
 
-        <button class="burger-menu" type="button" click-modal-open>
+        <button data-modal-open class="burger-menu" type="button">
           <svg class="icon-burger-menu">
             <use href="./images/sprite.svg#icon-charm_menu-hamburger"></use>
           </svg>
@@ -66,8 +66,8 @@
           </li>
         </ul>
       </div>
-      <div class="mobile-menu" full-modal>
-        <button class="close-mobile-menu" type="button" click-modal-close>
+      <div class="mobile-menu" data-modal>
+        <button class="close-mobile-menu" type="button" data-modal-close>
           <svg class="style-mobile-button-menu" width="8px" height="8px">
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
@@ -75,7 +75,9 @@
 
         <ul class="mobile-page-list list">
           <li class="mobile-link-space">
-            <a class="mobile-page-items decor" href="">Studio</a>
+            <a class="mobile-page-items curent-mobile-page decor" href=""
+              >Studio</a
+            >
           </li>
           <li class="mobile-link-space">
             <a class="mobile-page-items decor" href="">Portfolio</a>
@@ -87,15 +89,12 @@
 
         <ul class="mobile-list-contacts list">
           <li class="mob-menu-items">
-            <a class="mob-tel-style" href="tel:+11(000)111-11-11" class="decor"
-              >+11 (000) 111-11-11</a
+            <a class="mob-tel-style decor" href="tel:+11(000)111-11-11">
+              +11 (000) 111-11-11</a
             >
           </li>
           <li class="mob-menu-items">
-            <a
-              class="mail-mobile-menu"
-              href="mailto:info@devstudio.com"
-              class="decor"
+            <a class="mail-mobile-menu decor" href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
           </li>
@@ -140,7 +139,7 @@
         <div class="container hero-case">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
 
-          <button data-modal-open class="buttons-style" type="button">
+          <button data-modal-opens class="buttons-style" type="button">
             Order Service
           </button>
         </div>
@@ -566,9 +565,9 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modals>
       <div class="modal">
-        <button data-modal-close type="button" class="close-modal">
+        <button data-modal-closes type="button" class="close-modal">
           <svg class="position" width="8px" height="8px">
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
